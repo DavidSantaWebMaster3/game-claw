@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de máquina de regalos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="escenary">
+      <main class="game-page">
+        <h1 class="modal-title">Amor &amp; Amistad x Ani-K</h1>
+        <p class="modal-subtitle">
+          Usa las flechas para mover la garra y presiona bajar
+        </p>
+
+        <div class="claw-machine ready" id="machine">
+        <div class="machine-glass" id="glass">
+          <div class="machine-roof"></div>
+
+          <div class="claw" id="claw">
+            <div class="claw-rope" id="clawRope"></div>
+            <div class="claw-body" id="clawBody">
+              <div class="claw-hub"></div>
+              <div class="claw-arm left"></div>
+              <div class="claw-arm right"></div>
+            </div>
+          </div>
+
+          <div class="gifts" id="gifts"></div>
+
+          <div class="glass-floor"></div>
+        </div>
+
+        <div class="machine-front"></div>
+
+        <div class="machine-panel">
+          <button
+            class="control-btn arrow"
+            id="left-btn"
+            aria-label="Mover a la izquierda"
+          >
+            <svg viewBox="0 0 24 24"><path d="M16 4 L6 12 L16 20 Z" /></svg>
+          </button>
+          <button
+            class="control-btn drop"
+            id="drop-btn"
+            aria-label="Bajar la garra"
+          >
+            <svg viewBox="0 0 24 24">
+              <rect x="6" y="3" width="12" height="2.2" rx="1" />
+              <rect x="6" y="7" width="12" height="2.2" rx="1" />
+              <path d="M3 11 H21 L12 21 Z" />
+            </svg>
+          </button>
+          <button
+            class="control-btn arrow"
+            id="right-btn"
+            aria-label="Mover a la derecha"
+          >
+            <svg viewBox="0 0 24 24"><path d="M8 4 L18 12 L8 20 Z" /></svg>
+          </button>
+        </div>
+        </div>
+      </main>
+
+      <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal-container">
+          <button class="close-btn" id="closeBtn" aria-label="Cerrar">
+            &times;
+          </button>
+
+          <div class="prize-screen hidden" id="prizeScreen">
+            <div class="prize-gift" id="prizeGift"></div>
+            <h3 id="prizeTitle">¡Felicidades!</h3>
+            <div class="coupon-box">
+              <span id="wonPrize"></span>
+              <div class="code-container">
+                <strong id="couponCode"></strong>
+                <button id="copyBtn">Copiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
